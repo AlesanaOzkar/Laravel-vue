@@ -1,0 +1,53 @@
+html, body {
+    font-family: 'Exo', sans-serif;
+    background:$body-bg;
+    font-size: 14px; 
+}
+
+.seccion-general{
+    margin: 1em 0 1em 0;
+    background-color:$seccion-bg;
+    -webkit-box-shadow: 0px 1px 6px 2px rgba(145,145,145,1);
+    -moz-box-shadow: 0px 1px 6px 2px rgba(145,145,145,1);
+    box-shadow: 0px 1px 6px 2px rgba(145,145,145,1);
+    border-radius: .5em;
+}
+
+.titulo{
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.seccion-titulo{
+    padding: .5em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid $azul-claro;
+}
+.menu{
+    background-color:$menu-bg;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+//
+.cursor-pointer{
+    cursor: pointer !important;
+}
+
+//Boton general
+.btn-general{
+    border: 0;
+    padding: 0;
+    background: #FFFFFF00;
+    border-bottom: solid 2px;
+    font-size: 1.14em;
+    letter-spacing: 0;
+    font-weight: 500;
+}
+//Botón rojo
+.btn-rojo{
+    color: #C13139 !important;
+    border-color: #C13139 !important;
+}

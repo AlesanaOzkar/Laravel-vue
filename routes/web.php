@@ -20,7 +20,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/pacientes', 'PacientesController@index')->name('pacientes');
 
 //Guardar paciente
-Route::post('/pacientes','PacientesController@store');
+//Route::post('/pacientes','PacientesController@store');
+
+Route::prefix('paciente')->group(function () {
+    //Guardar paciente
+    Route::get('/ficha/{id}','PacientesController@ficha')->name('ficha');
+});
+
+
 
 
  

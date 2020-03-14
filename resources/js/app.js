@@ -5,6 +5,8 @@
  */
 
 require('./bootstrap');
+//Carga el js de los pacientes
+require('./general/_pacientes');
 
 window.Vue = require('vue');
 

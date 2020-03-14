@@ -11,7 +11,12 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
+    //Obtiene el datatable
+    require( 'datatables.net-dt' )();
 } catch (e) {}
+
+
+
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

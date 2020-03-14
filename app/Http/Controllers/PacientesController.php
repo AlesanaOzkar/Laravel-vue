@@ -20,6 +20,19 @@ class PacientesController extends Controller
         return view('pacientes/index',['pacientes' => $pacientes]);
     }
 
+
+    //Obtiene un paciente por el id
+    public function getPacientePorId($id){
+        $paciente = Paciente::findOrFail($id);
+        return $paciente;
+    }
+
+        //Obtiene un paciente por el id
+    public function ficha($id){
+        $paciente = Paciente::findOrFail($id);
+        return view('pacientes.ficha',['paciente' => $paciente]);
+    }
+
     public function blade(){
 
         //Array chido

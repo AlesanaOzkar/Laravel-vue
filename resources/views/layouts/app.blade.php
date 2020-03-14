@@ -15,7 +15,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+ 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    Agenda médica
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -49,9 +49,7 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('pacientes') }}">Pacientes</a>
-                            </li>
+                         
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -75,14 +73,25 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
+     
+        <main class="container-fluid">
+            <div class="row">
+                <div class="col-1 menu">
+                
+                    <a class="nav-link" href="{{ route('pacientes') }}">Pacientes</a>
+                                    
+                </div>
+                <div class="col-11">
+                    <div class="row seccion-general">
+                        <div class="col-12">
+                            @yield('content') 
+                        </div>
+                    </div>                  
+                </div>
+            </div>
         </main>
+        
     </div>
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ 
 </body>
 </html>
