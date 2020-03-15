@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,12 +17,12 @@ class CreatePacientes extends Migration
  
         Schema::create('pacientes', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id')->unsigned();
             $table->string('codigo')->unique()->nullable();
             $table->string('nombre');
             $table->string('apellido_paterno');
             $table->string('apellido_materno');
             $table->date('fecha_nacimiento')->nullable();
-  
             $table->enum('genero',['Masculino','Femenino'])->nullable();
             $table->string('ocupacion')->nullable();
             $table->string('email')->unique()->nullable();
@@ -31,6 +31,9 @@ class CreatePacientes extends Migration
             $table->integer('contactoemergencia_telefono')->nullable();
             $table->dateTime('fecha_ultima_consulta')->nullable();
             $table->text('notas')->nullable();
+            //Llave foranea
+            //$table->foreign('paciente_id')->references('id')->on('users');
+
             $table->timestamps();
         });
     }
@@ -45,3 +48,4 @@ class CreatePacientes extends Migration
         Schema::dropIfExists('pacientes');
     }
 }
+ 

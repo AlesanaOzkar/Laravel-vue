@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use App\User;
 class Paciente extends Model
 {
     //Nombre de la tabla
@@ -14,4 +14,10 @@ class Paciente extends Model
 
     //Campos que no pueden ser modificables
     protected $guarded = [''];
+
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

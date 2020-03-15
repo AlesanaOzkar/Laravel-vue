@@ -16,6 +16,7 @@
                     <tr>
                         <th>Código</th>
                         <th>Nombre</th>
+                        <th>Usuario</th>
                         <th>Apellido Paterno</th>
                         <th>Apellido Materno</th>
                         <th>Celular</th>
@@ -26,9 +27,10 @@
                     @foreach ($pacientes as $paciente)
                         <tr data-id="{{$paciente->id}}" class="paciente-fila cursor-pointer">
                             <td>{{ $paciente->codigo }}</td>
+                            <td>{{ $paciente->user->name }}</td>
                             <td>{{ $paciente->nombre }}</td>
                             <td>{{ $paciente->apellido_paterno }}</td>
-                            <td>{{ $paciente->apellido_paterno }}</td>
+                            <td>{{ $paciente->apellido_materno }}</td>
                             <td>{{ $paciente->telefono_celular }}</td>
                             <td>{{ $paciente->email }}</td>
                         </tr>

@@ -17,8 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::post('/pacientes','PacientesController@store');
-
 //Obtiene un paciente por el id
 Route::get('/paciente_por_id/{id}','PacientesController@getPacientePorId');
+//Guarda un paciente
+Route::post('/pacientes','PacientesController@store');
+
+
